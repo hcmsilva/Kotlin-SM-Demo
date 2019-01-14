@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Kotlin Payments Demo</string>
+    <string name="app_name">Kotlin MVP UT Demo</string>
+    <string name="start">Go Shopping</string>
+    <string name="welcome">Welcome to \nHenrique\'s \nGroceries</string>
+    <string name="purchase_successful">Purchase Successful!!!</string>
+    <string name="purchase_failed">Purchase failed!</string>
 </resources>
