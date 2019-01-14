@@ -4,9 +4,9 @@ import com.demos.henrique.mypaymentslibrary.dto.ActionLink
 import com.demos.henrique.mypaymentslibrary.utils.DummyGenerator
 
 
-class PaymentsStateMachine {
+open class PaymentsStateMachine {
 
-    var currState: State = State.ROOT
+    open var currState: State = State.ROOT
 
     enum class State {
         ROOT,
@@ -15,7 +15,7 @@ class PaymentsStateMachine {
         CANCELED
     }
 
-    fun getAvailableActions(): ActionLink =
+    open fun getAvailableActions(): ActionLink =
         when (currState) {
             PaymentsStateMachine.State.ROOT -> DummyGenerator.getRootActions()
             PaymentsStateMachine.State.AUTHORIZED -> DummyGenerator.getAuthorizedActions()

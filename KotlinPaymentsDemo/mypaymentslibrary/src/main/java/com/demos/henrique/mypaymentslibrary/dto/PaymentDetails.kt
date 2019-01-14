@@ -3,7 +3,7 @@ package com.demos.henrique.mypaymentslibrary.dto
 import com.demos.henrique.mypaymentslibrary.model.SelfValidator
 import com.google.gson.annotations.SerializedName
 
-data class PaymentDetails(
+open class PaymentDetails(
 
 	@field:SerializedName("transactionReference")
 	val transactionReference: String? = null,
