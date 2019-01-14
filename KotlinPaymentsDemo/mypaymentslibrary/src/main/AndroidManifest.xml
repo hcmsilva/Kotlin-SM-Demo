@@ -1,2 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.demos.henrique.mypaymentslibrary"/>
+          package="com.demos.henrique.mypaymentslibrary">
+
+    <application>
+        <activity android:name="com.demos.henrique.mypaymentslibrary.purchase.PurchaseActivity">
+        </activity>
+    </application>
+
+</manifest>
