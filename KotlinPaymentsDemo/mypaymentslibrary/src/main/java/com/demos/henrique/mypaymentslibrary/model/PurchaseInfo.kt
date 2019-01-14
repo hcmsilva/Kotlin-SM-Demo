@@ -1,3 +1,3 @@
-package com.demos.henrique.mylibrary.model
+package com.demos.henrique.mypaymentslibrary.model
 
 data class PurchaseInfo(val itemName: String, val price: Int)

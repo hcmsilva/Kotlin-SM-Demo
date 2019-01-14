@@ -1,6 +1,6 @@
 package com.demos.henrique.mypaymentslibrary.purchase
 
-import com.demos.henrique.mylibrary.model.PurchaseInfo
+import com.demos.henrique.mypaymentslibrary.model.PurchaseInfo
 
 
 interface PurchaseContract {
@@ -12,7 +12,7 @@ interface PurchaseContract {
     }
 
     interface PurchasePresenterContract {
-        fun authorizePaymentStart(): Unit
+        fun authorizePaymentStart()
         fun settlePayment()
         fun getPurchase(): PurchaseInfo
     }
