@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MyPaymentsLibrary</string>
+    <string name="root_url">https://access.worldpay.com/payments</string>
+    <string name="authorize_payments_url"></string>
+    <string name="checkout_str">Checkout</string>
+    <string name="description_str">Description</string>
+    <string name="description_content_str"/>
+    <string name="price_str">Price</string>
+    <string name="confirm_str">Confirm</string>
+    <string name="authorize_payment_confirmation">Authorize payment?</string>
+    <string name="authorize_ok">Authorize</string>
+    <string name="deny">Deny</string>
+    <string name="payment_unauthorized">Payment Unauthorized</string>
 </resources>
