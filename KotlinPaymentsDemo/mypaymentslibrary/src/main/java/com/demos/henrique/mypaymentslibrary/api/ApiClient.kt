@@ -2,7 +2,7 @@ package com.demos.henrique.mypaymentslibrary.api
 
 import com.demos.henrique.mypaymentslibrary.dto.PaymentDetails
 
-class ApiClient(val stateMachine: PaymentsStateMachine) : ApiService {
+open class ApiClient(open val stateMachine: PaymentsStateMachine) : ApiService {
     override fun initPaymentOperations(authHeader: String): Boolean {
         if (!validateAuthHeader(authHeader))
             return false
@@ -11,9 +11,9 @@ class ApiClient(val stateMachine: PaymentsStateMachine) : ApiService {
         return availableActions.paymentsAuthorize != null
     }
 
-    override fun authorizePayment(paymentDetails: PaymentDetails, authHeader: String): Boolean {
+    override fun authorizePayment(paymentDetails: PaymentDetails?, authHeader: String): Boolean {
         if (
-            !validateAuthHeader(authHeader) ||
+            !validateAuthHeader(authHeader) || paymentDetails == null ||
             !paymentDetails.isValid() ||
             stateMachine.getAvailableActions().paymentsAuthorize == null
         )

@@ -1,3 +1,3 @@
 package com.demos.henrique.mypaymentslibrary.model
 
-data class PurchaseInfo(val itemName: String, val price: Int)
+open class PurchaseInfo(open val itemName: String, open val price: Int)
