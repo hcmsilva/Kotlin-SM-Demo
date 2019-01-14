@@ -4,8 +4,7 @@ package com.demos.henrique.mypaymentslibrary.dto
 import com.demos.henrique.mypaymentslibrary.model.SelfValidator
 import com.google.gson.annotations.SerializedName
 
-
-data class Value(
+open class Value(
 
     @field:SerializedName("amount")
     val amount: Int? = null,

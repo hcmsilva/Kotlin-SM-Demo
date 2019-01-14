@@ -5,7 +5,7 @@ import com.demos.henrique.mypaymentslibrary.model.SelfValidator
 import com.google.gson.annotations.SerializedName
 
 
-data class CardExpiryDate(
+open class CardExpiryDate(
 
     @field:SerializedName("month")
     val month: Int? = null,

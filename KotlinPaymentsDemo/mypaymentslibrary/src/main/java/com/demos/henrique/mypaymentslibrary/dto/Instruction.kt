@@ -5,7 +5,7 @@ import com.demos.henrique.mypaymentslibrary.model.SelfValidator
 import com.google.gson.annotations.SerializedName
 
 
-data class Instruction(
+open class Instruction(
 
     @field:SerializedName("description")
     val description: String? = null,
@@ -17,9 +17,9 @@ data class Instruction(
     val value: Value? = null
 ) : SelfValidator {
     override fun isValid(): Boolean {
-        return if(value == null)
+        return if(value == null || paymentInstrument == null || description == null)
                     false
         else
-            !description.isNullOrEmpty() && value.isValid()
+            !description.isNullOrEmpty() && value.isValid() && paymentInstrument.isValid()
     }
 }

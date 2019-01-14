@@ -3,7 +3,7 @@ package com.demos.henrique.mypaymentslibrary.dto
 import com.demos.henrique.mypaymentslibrary.model.SelfValidator
 import com.google.gson.annotations.SerializedName
 
-data class BillingAddress(
+open class BillingAddress(
 
     @field:SerializedName("address2")
     val address2: String? = null,

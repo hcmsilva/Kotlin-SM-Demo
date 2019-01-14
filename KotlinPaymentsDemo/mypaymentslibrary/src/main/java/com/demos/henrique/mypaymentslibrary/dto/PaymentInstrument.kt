@@ -5,7 +5,7 @@ import com.demos.henrique.mypaymentslibrary.model.SelfValidator
 import com.google.gson.annotations.SerializedName
 
 
-data class PaymentInstrument(
+open class PaymentInstrument(
 
     @field:SerializedName("cvc")
     val cvc: String? = null,
