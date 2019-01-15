@@ -17,6 +17,6 @@ class AislesPresenter(private val aislesActivity: AislesActivity) : AislesPresen
     override fun getDataList() = currDataList
 
     override fun buyItem(item: AisleItem) {
-        PaymentUtilities.pay(item.name, item.price, aislesActivity)
+        PaymentUtilities.pay(item.name, item.price, aislesActivity, PaymentUtilities.PAYMENT_OPCODE)
     }
 }

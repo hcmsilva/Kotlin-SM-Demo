@@ -15,9 +15,9 @@ class PaymentUtilities {
         val PRICE_KEY = "price"
 
         @JvmStatic
-        fun pay(description: String, price: Int, parentActivity: Activity) =
+        fun pay(description: String, price: Int, parentActivity: Activity, code: Int) =
             parentActivity.startActivityForResult(
-                getStarterIntent(description, price, parentActivity), PAYMENT_OPCODE
+                getStarterIntent(description, price, parentActivity), code
             )
 
 
